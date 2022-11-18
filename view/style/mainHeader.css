@@ -8,6 +8,7 @@ header{
 
 .bottomHeader{
     background: url(./assets/une-jeu-video-twitch.jpeg);
+    background-repeat: no-repeat;
 }
 
 .gotopbtn {
