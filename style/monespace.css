@@ -1,0 +1,243 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(17, 13, 48, 0.53);
+}
+
+section{
+    background-image: url("assets/funny\ rat\ 12.jpeg");
+    no-repeat;
+}
+
+.profileAvatar{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    box-shadow: 0 0 10px rgb(250,140,0);
+    overflow: hidden;
+    top: 150px;
+    right: 240px;
+}
+
+.profileName{
+    color: rgb(199,202,229);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: normal;
+    background-color: rgb(14,10,40);
+
+    padding: 25px;
+    border-radius: 5px;
+    position: relative;
+    top: 150px;
+    right: 200px;
+    box-shadow: 0 0 7px rgb(250,140,0);
+    width: 300px;
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.activity{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background:rgb(21, 16, 58);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.leftActivity{
+    display: flex;
+    flex-direction: column;
+}
+
+.rightActivity{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
+.recentPosts{
+    color: rgb(199,202,229);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.recentPosts > li{
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(28,32,69);
+    margin-bottom: 15px;
+}
+
+.recentPosts > li::marker{
+    color: rgb(250,140,0);
+}
+
+.friends{
+    color: rgb(199,202,229);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.friends > a{
+    color: rgb(199,202,229);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(28,32,69);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.friends > a:hover{
+    text-decoration: none;
+    color: rgb(250, 142, 0);
+}
+
+
+.friendAvatar{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.highScores > ul > li::marker{
+    color: rgb(250,140,0);
+}
+
+.highScores{
+    color: rgb(199,202,229);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.highScores > ul > li{
+    margin-bottom: 6px;
+}
+
+.highScores > a{
+    text-decoration: none;
+    color: rgba(250, 142, 0, 0.678);
+}
+
+.highScores > a:hover{
+    text-decoration: none;
+    color: rgb(250, 142, 0);
+}
+
+.postTitle{
+    color: rgb(199,202,229);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(14,10,40);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(250,140,0);
+}
+
+.friendTitle{
+    color: rgb(199,202,229);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(14,10,40);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(250,140,0);
+    margin-left: 40px;
+}
+
+.hashtag{
+    text-decoration: none;
+    color: rgba(250, 142, 0, 0.678);
+}
+
+.hashtag:hover{
+    text-decoration: none;
+    color: rgb(250, 142, 0);
+}
+
+.resets{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.emailReset{
+    margin-right: 30px;
+}
+
+form input[name="email"],
+form input[name="password"]{
+    width: 200px;
+    margin-right: 10px;
+
+    margin-bottom: 15px;
+    padding: 12px;
+
+    background-color: rgb(28,32,69);
+    color: rgb(199,202,229);
+    border: none;
+    text-decoration: none;
+}
+
+form input[name="email"]:focus,
+form input[name="password"]:focus {
+    outline: none !important;
+    border:1px solid rgb(250,140,0);
+    box-shadow: 0 0 6px rgb(250,140,0);
+  }
+
+.resetButton{
+    text-decoration: none;
+    background-color: rgb(250,140,0);
+    color: rgb(225, 227, 243);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 30%;
+}
+
+.resetButton:hover{
+    text-decoration: none;
+    background-color: rgb(255, 174, 0);
+}
+
+.emailReset > form{
+    margin-bottom: 10px;
+}
+
+.passwordReset > form{
+    margin-bottom: 10px;
+}
