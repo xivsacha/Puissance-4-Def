@@ -98,7 +98,7 @@ a{
 
 form input[name="email"],
 form input[name="name"]{
-    width: 40%;
+    width: 20%;
     max-width: 300px;
     margin-right: 10px;
 
@@ -113,7 +113,7 @@ form input[name="name"]{
 
 form input[name="subject"]{
 
-    width: 95%;
+    width: 50%;
     min-width: 430px;
     max-width: 700px;
 
@@ -127,7 +127,7 @@ form input[name="subject"]{
 }
 
 form input[name="msg"]{
-    width: 100%;
+    width: 50%;
     min-width: 430px;
 
     
@@ -147,7 +147,7 @@ form input[name="msg"]{
 
 .textInput{
 
-    width: 95%;
+    width: 50%;
     resize: both;
     overflow: auto;
     min-height: 32px;
@@ -170,14 +170,29 @@ form input[type="email"]:focus,
 form input [type="email"]:hover,
 form input[type="text"]:focus,
 form input [type="text"]:hover,
-form input[type="password"]:focus,
-form input [type="password"]:hover,
-form input[type="password"]:focus,
-form input [type="password"]:hover { 
-    background-color: rgb(40, 45, 93);
+form textarea [type="message"]:focus,
+form textarea [type="message"]:hover { 
+    outline: none !important;
+    border:1px solid rgb(250,140,0);
+    box-shadow: 0 0 6px rgb(250,140,0);
 }
 
 form button[type="submit"]:focus,
 form button[type="submit"]:hover{
-    background-color: rgb(40, 45, 93);
+    outline: none;
+    background-color: rgb(255, 174, 0);
+}
+
+.success{
+    color: rgb(199, 229, 200);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.failed{
+    color: rgb(229, 199, 199);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
 }
