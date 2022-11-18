@@ -11,7 +11,8 @@
 </head>
 <body>
     <?php
-        include '../view/header.inc.php';
+       
+       include "./view/header.inc.php";
     ?>
     <section class="main">
         <div class="forms">
@@ -27,7 +28,7 @@
     </section>
 
     <?php 
-        include("../view/footer.inc.php");
+         include "./view/footer.inc.php";
     ?>
     
 </body>

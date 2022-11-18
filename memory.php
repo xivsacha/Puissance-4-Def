@@ -82,6 +82,7 @@
         </label>
     </div>
 
-    <?php include("../view/footer.inc.php");?>
+    <?php include "./view/footer.inc.php";
+    ?>
 </body>
 </php>

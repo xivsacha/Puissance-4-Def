@@ -87,6 +87,6 @@
         <p class="white">will add a load more button when its linked to the database</p>
     </section>
 
-    <?php include "../view/footer.inc.php";?>
+    <?php  include "./view/footer.inc.php";?>
 </body>
 </php>

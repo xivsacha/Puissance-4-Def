@@ -11,7 +11,8 @@
 </head>
 <body>
     <?php
-        include "../view/header.inc.php";
+         
+        include "./view/header.inc.php";
     ?>
     <section class="main">
 
@@ -35,6 +36,6 @@
  
     </section>
 
-    <?php include "../view/footer.inc.php" ;?>
+    <?php include include "./view/footer.inc.php";?>
 </body>
 </php>

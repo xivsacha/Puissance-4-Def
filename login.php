@@ -11,7 +11,8 @@
 </head>
 <body>
     <?php
-        include "../view/header.inc.php";
+       
+        include "./view/header.inc.php";
     ?>
     <section class="main">
         <div class="forms">
@@ -23,6 +24,6 @@
                 </a> <a href="inscription.php" class="option">Pas de compte? Inscrivez-vous!</a></div>
             </div>
     </section>
-    <?php include "../view/footer.inc.php";?>
+    <?php include "./view/footer.inc.php";?>
 </body>
 </php>
