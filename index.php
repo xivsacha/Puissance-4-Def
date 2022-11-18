@@ -10,7 +10,7 @@
     <link href="style/footer.css" rel="stylesheet">
 </head>
 <body>
-    <?php include("../view/header.inc.php");?>
+    <?php include("./view/header.inc.php");?>
     <div class="bottomHeader">
             <p class="bigTitle">BIENVENUE DANS<br>NOTRE STUDIO !<br>
             <span class="white">Venez challenger les cerveaux les plus agiles !</span></p>
@@ -58,6 +58,6 @@
             </div>
         </div>
     </section>
-    <?php include("../view/footer.inc.php");?>
+    <?php include("./view/footer.inc.php");?>
 </body>
 </php>

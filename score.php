@@ -11,7 +11,7 @@
 </head>
 <body>
     <?php
-        include "../view/header.inc.php";
+        include "./view/header.inc.php";
     ?>
 
     <section class="scoreMain">

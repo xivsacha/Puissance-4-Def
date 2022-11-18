@@ -7,7 +7,8 @@ header{
 }
 
 .bottomHeader{
-    background: url(./assets/une-jeu-video-twitch.jpeg);
+    background: url(../style/assets/une-jeu-video-twitch.jpeg);
+    
 }
 
 .gotopbtn {

@@ -1,5 +1,5 @@
 <html>
-<link href="../../PHP/view/style/footer.css" rel="stylesheet">
+<link href="./view/footer.css" rel="stylesheet">
     <footer>
         <div class="leftFooter">
             <p class="subTitle">Information</p>
