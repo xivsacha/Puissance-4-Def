@@ -11,6 +11,12 @@
 </head>
 <body>
     <?php include("../view/header.inc.php");?>
+    <div class="bottomHeader">
+            <p class="bigTitle">BIENVENUE DANS<br>NOTRE STUDIO !<br>
+            <span class="white">Venez challenger les cerveaux les plus agiles !</span></p>
+            <a href="memory.php" class="orangeButton">JOUER !</a>
+    </div>
+
     <section class="section1">
         <article class="firstMain">
             <div class="images1">

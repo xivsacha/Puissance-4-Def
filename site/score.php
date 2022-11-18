@@ -11,8 +11,8 @@
     <link href="style/footer.css" rel="stylesheet">
 </head>
 <body>
-    <?php
-        include "../view/header.inc.php";
+    <?php>
+        include("view/header.inc.php");
     ?>
 
     <section class="scoreMain">
@@ -87,6 +87,7 @@
         </table>
         <p class="white">will add a load more button when its linked to the database</p>
     </section>
+
     <?php include("../view/header.inc.php");?>
 </body>
 </php>

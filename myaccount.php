@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <php lang="en">
 <head>
+<<<<<<< HEAD
     <meta content="text/html; charset=utf-8" http-equiv="content-type">
+=======
+>>>>>>> af448f4dd5b5386369b10754f38ae657ee2f0d53
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +15,13 @@
 
 </head>
 <body>
+<<<<<<< HEAD
     <?php>
         include("view/header.inc.php");
+=======
+    <?php
+        include "../view/header.inc.php" ;
+>>>>>>> af448f4dd5b5386369b10754f38ae657ee2f0d53
     ?>
     <section>
         <div class="banner">
@@ -77,6 +85,10 @@
         </div>
     </section>
 
+<<<<<<< HEAD
     <?php include("../view/header.inc.php");?>
+=======
+    <?php include "../view/footer.inc.php";?>
+>>>>>>> af448f4dd5b5386369b10754f38ae657ee2f0d53
 </body>
 </php>

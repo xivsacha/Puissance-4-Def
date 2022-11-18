@@ -14,7 +14,6 @@
     <?php>
         include("view/header.inc.php");
     ?>
-
     <section class="main">
 
         <div class="contactInfo">
@@ -35,7 +34,6 @@
         </div>
  
     </section>
-
 
     <?php include("../view/footer.inc.php");?>
 </body>
