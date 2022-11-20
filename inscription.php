@@ -2,7 +2,7 @@
 require ('./includes/database.inc.php'); 
 
 if(isset($_POST['submit']))
-{
+{ die"test"; 
    $pseudo = $_POST['pseudo'];
    $email = $_POST['email'];
    $password = $_POST['password'];
@@ -10,7 +10,7 @@ if(isset($_POST['submit']))
    if(filter_var($email, FILTER_VALIDATE_EMAIL)){
     if (preg_match('/[a-z]/', $password) && preg_match('/[A-Z]/', $password)  && preg_match('/\d/', $password) || preg_match('/[^a-zA-Z\d]/', $password)) {
             if($password_retype == $password){
-                $sth = $dbh->prepare("INSERT INTO utilisateur (email, mdp, pseudo, date_heure_inscr, date_heure_last) VALUES (?, ?, ?, NOW(), NOW())");
+                $sth = $dbh->prepare("INSERT INTO users (email,password, pseudo, date_heure_inscr, date_heure_last) VALUES (?, ?, ?, NOW(), NOW())");
                 $sth->execute([$email, $password, $pseudo]);
                 $data = $sth->fetch();
                 header('Location:connexion.php');
@@ -41,7 +41,7 @@ include "./view/header.inc.php";
                     <input type="email" name="email" placeholder="Email"   required="required" /> <br>
                     <input type="text" name="name" placeholder="Pseudo"  required="required"/> <br>
                     <input type="password" name="password" placeholder="Mot de passe"  required="required"/> <br>
-                    <input type="password" name="password" placeholder="Confirmer le mot de passe"  required="required"/>
+                    <input type="password_RETYPE" name="password" placeholder="Confirmer le mot de passe"  required="required"/>
                     <input type="submit" name="submit" value="connexion"/>
 
 
