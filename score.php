@@ -10,6 +10,7 @@
     <link href="style/footer.css" rel="stylesheet">
 </head>
 <body>
+    
     <?php
         include "./view/header.inc.php";
     ?>

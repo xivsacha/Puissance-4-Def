@@ -33,3 +33,16 @@
     
 </body>
 </php>
+<?php
+  $email = "aouadilina04@gmail.com";
+
+  
+  if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+    echo "L'adresse e-mail est valide";
+  }else{
+    echo "L'adresse e-mail n'est pas valide";
+  }
+
+
+?>
+
