@@ -36,6 +36,6 @@
  
     </section>
 
-    <?php include include "./view/footer.inc.php";?>
+    <?php include "./view/footer.inc.php";?>
 </body>
 </html>

@@ -1,5 +1,6 @@
 <?php
 session_start();
+?>
 <link href="./view/mainHeader.css" rel="stylesheet">
     <header>
         <div class="topHeader">
@@ -13,4 +14,3 @@ session_start();
             </p>
         </div>
     </header>
-?>
