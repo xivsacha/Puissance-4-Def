@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<php lang="en">
+<html lang="en">
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="content-type">
     <meta charset="UTF-8">
@@ -61,4 +61,5 @@
     <?php include "./view/footer.inc.php";
     ?>
 </body>
+</html>
 

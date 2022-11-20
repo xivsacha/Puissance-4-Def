@@ -1,4 +1,5 @@
-<php>
+<?php
+session_start();
 <link href="./view/mainHeader.css" rel="stylesheet">
     <header>
         <div class="topHeader">
@@ -12,4 +13,4 @@
             </p>
         </div>
     </header>
-</php>
+?>

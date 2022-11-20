@@ -1,5 +1,29 @@
+<?php
+require ('./includes/database.inc.php'); 
+
+if(isset($_POST['submit']))
+{
+   $pseudo = $_POST['pseudo'];
+   $email = $_POST['email'];
+   $password = $_POST['password'];
+   $password_retype = $_POST['password_retype'];
+   if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+    if (preg_match('/[a-z]/', $password) && preg_match('/[A-Z]/', $password)  && preg_match('/\d/', $password) || preg_match('/[^a-zA-Z\d]/', $password)) {
+            if($password_retype == $password){
+                $sth = $dbh->prepare("INSERT INTO utilisateur (email, mdp, pseudo, date_heure_inscr, date_heure_last) VALUES (?, ?, ?, NOW(), NOW())");
+                $sth->execute([$email, $password, $pseudo]);
+                $data = $sth->fetch();
+                header('Location:connexion.php');
+
+}}
+}}
+       
+include "./view/header.inc.php";
+?>
+
+
 <!DOCTYPE html>
-<php lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,10 +34,7 @@
     <link rel="stylesheet" href="style/sideHeader.css"/>
 </head>
 <body>
-    <?php
-       
-       include "./view/header.inc.php";
-    ?>
+    
     <section class="main">
         <div class="forms">
                 <form action="" method="post">
@@ -21,6 +42,9 @@
                     <input type="text" name="name" placeholder="Pseudo"  required="required"/> <br>
                     <input type="password" name="password" placeholder="Mot de passe"  required="required"/> <br>
                     <input type="password" name="password" placeholder="Confirmer le mot de passe"  required="required"/>
+                    <input type="submit" name="submit" value="connexion"/>
+
+
                 </form>
                 <div class="buttonStuff"><a href="myaccount.php" class="orangeButton">Inscription
                 </a> <a href="login.php" class="option">Déjà un compte? Connectez-vous!</a></div>
@@ -32,17 +56,6 @@
     ?>
     
 </body>
-</php>
-<?php
-  $email = "aouadilina04@gmail.com";
+</html>
 
-  
-  if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-    echo "L'adresse e-mail est valide";
-  }else{
-    echo "L'adresse e-mail n'est pas valide";
-  }
-
-
-?>
 

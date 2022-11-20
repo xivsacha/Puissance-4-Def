@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<php lang="en">
+
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -77,7 +78,7 @@ if (isset($_POST['email']) &&  isset($_POST['password'])) {
         Bonjour <?php echo $loggedUser['email']; ?> et bienvenue sur le site !
     </div>
 <?php endif; ?>
-    <?php include "./view/footer.inc.php";?>
+   
 
 </body>
-</php>
+</html>
