@@ -7,8 +7,8 @@ header{
 }
 
 .bottomHeader{
-    background: url(../style/assets/une-jeu-video-twitch.jpeg);
-    
+    background: url(./assets/une-jeu-video-twitch.jpeg);
+    background-repeat: no-repeat;
 }
 
 .gotopbtn {
@@ -80,7 +80,8 @@ header{
 }
 
 .navLinks:hover{
-    text-decoration: underline;
+    text-decoration: none;
+    color: rgb(250,140,0);
 }
 
 .orangeButton{
@@ -118,6 +119,4 @@ header{
     color: rgb(250, 251, 253);
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
-    
-
 }
