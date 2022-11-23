@@ -134,8 +134,3 @@ form input[type="password"]:focus,
 form input [type="password"]:hover { 
     background-color: rgb(40, 45, 93);
 }
-
-form button[type="submit"]:focus,
-form button[type="submit"]:hover{
-    background-color: rgb(40, 45, 93);
-}

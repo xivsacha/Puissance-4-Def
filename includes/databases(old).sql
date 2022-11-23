@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.1.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Generation Time: Nov 23, 2022 at 01:01 PM
--- Server version: 5.7.34
--- PHP Version: 7.4.21
+-- Host: localhost:3306
+-- Generation Time: Nov 09, 2022 at 09:36 AM
+-- Server version: 5.7.24
+-- PHP Version: 8.0.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,12 +24,12 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `jeu`
+-- Table structure for table `game`
 --
 
-CREATE TABLE `jeu` (
-  `ID` int(11) NOT NULL,
-  `game_name` varchar(255) NOT NULL
+CREATE TABLE `game` (
+  `game_ID` int(11) NOT NULL,
+  `game_name` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -39,11 +39,11 @@ CREATE TABLE `jeu` (
 --
 
 CREATE TABLE `message` (
-  `ID` int(11) NOT NULL,
-  `ID_jeu` int(11) NOT NULL,
-  `ID_utilisateur` int(11) NOT NULL,
-  `message` varchar(255) NOT NULL,
-  `datetime_mess` datetime NOT NULL
+  `message_ID` int(11) NOT NULL,
+  `game_ID` int(11) NOT NULL,
+  `player_ID` int(11) NOT NULL,
+  `message` text NOT NULL,
+  `message_date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -53,28 +53,27 @@ CREATE TABLE `message` (
 --
 
 CREATE TABLE `score` (
-  `ID` int(11) NOT NULL,
-  `ID_utilisateur` int(11) NOT NULL,
-  `ID_jeu` int(11) NOT NULL,
-  `level_game` int(11) NOT NULL,
-  `score` int(11) NOT NULL,
-  `datetime_partie` datetime NOT NULL,
-  `time` time NOT NULL
+  `score_ID` int(11) NOT NULL,
+  `player_ID` int(11) NOT NULL,
+  `game_ID` int(11) NOT NULL,
+  `game_difficulty` text NOT NULL,
+  `game_score` int(11) NOT NULL,
+  `game_date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `utilisateur`
+-- Table structure for table `user`
 --
 
-CREATE TABLE `utilisateur` (
-  `ID` int(11) NOT NULL,
+CREATE TABLE `user` (
+  `player_ID` int(11) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `pseudo` varchar(255) NOT NULL,
-  `datetime_first` datetime NOT NULL,
-  `datetime_last` datetime NOT NULL
+  `password` char(60) NOT NULL,
+  `pseudo` varchar(16) NOT NULL,
+  `inscr_date` datetime NOT NULL,
+  `login_date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -82,56 +81,56 @@ CREATE TABLE `utilisateur` (
 --
 
 --
--- Indexes for table `jeu`
+-- Indexes for table `game`
 --
-ALTER TABLE `jeu`
-  ADD PRIMARY KEY (`ID`);
+ALTER TABLE `game`
+  ADD PRIMARY KEY (`game_ID`);
 
 --
 -- Indexes for table `message`
 --
 ALTER TABLE `message`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`message_ID`);
 
 --
 -- Indexes for table `score`
 --
 ALTER TABLE `score`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`score_ID`);
 
 --
--- Indexes for table `utilisateur`
+-- Indexes for table `user`
 --
-ALTER TABLE `utilisateur`
-  ADD PRIMARY KEY (`ID`);
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`player_ID`,`email`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `jeu`
+-- AUTO_INCREMENT for table `game`
 --
-ALTER TABLE `jeu`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `game`
+  MODIFY `game_ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `message`
 --
 ALTER TABLE `message`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `message_ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `score`
 --
 ALTER TABLE `score`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `score_ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `utilisateur`
+-- AUTO_INCREMENT for table `user`
 --
-ALTER TABLE `utilisateur`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `user`
+  MODIFY `player_ID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
