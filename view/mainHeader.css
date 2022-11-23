@@ -80,7 +80,8 @@ header{
 }
 
 .navLinks:hover{
-    text-decoration: underline;
+    text-decoration: none;
+    color: rgb(250,140,0);
 }
 
 .orangeButton{
