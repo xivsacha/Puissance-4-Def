@@ -76,7 +76,7 @@
         </div>
             <form id="form">
                 <input class="typingWindow" type="text" id="text">
-                <input type="image" name="submit" src="assets/4822126.png">
+                <input type="image" name="submit" src="style/assets/chaticon2.png">
             </form>
     </div>
 
