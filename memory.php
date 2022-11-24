@@ -67,22 +67,18 @@
         </div>
     </section>
 
-    <div class="chat">
-        <input type="checkbox" id="chatControl">
-        <label class="chatButton" for="chatControl">
-            <div class="chatWindow">
-                <div class="chatWindow2">
-                    <img src="style/assets/chaticon2.png" class="chatIcon">
-                    <img src="style/assets/funny rat 3.webp" class="avatar">
-                    <p class="textMessage">Quisque commodo facilisis purus, interdum volutpat arcu viverra sed.</p>
-                    <p class="yourTextMessage">Quisque commodo facilisis purus, interdum volutpat arcu viverra sed.</p>
-                </div>
-                <textarea class="typingWindow"></textarea>
-            </div>
-        </label>
+    <div class="chatBox" id="chatBox">
+        <div id="msgBox">
+        </div>
+            <form id="form">
+                <input class="typingWindow" type="text" id="text">
+                <input type="image" name="submit" src="assets/4822126.png">
+            </form>
     </div>
 
     <?php include "./view/footer.inc.php";
     ?>
+
+    <script src="chat.js"></script>
 </body>
 </html>
