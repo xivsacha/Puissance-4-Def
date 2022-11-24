@@ -5,17 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory</title>
-    <link href="style/sideHeader.css" rel="stylesheet">
+   
     <link href="style/memory.css" rel="stylesheet">
     <link href="style/chat.css" rel="stylesheet">
-    <link href="style/footer.css" rel="stylesheet">
+   
 </head>
 <body>
     <?php
         include "./view/header.inc.php";
     ?>
+    <a class="gotopbtn" href="#"><i class="fa-solid fa-angle-up"></i></a>
+    <section class="tittle">
+    <h1 >JEU</h1>
+    </section>    
 
-    <section class="game">
+<section class="game">
         <table class="table">
             <thead>
                 <tr>
@@ -82,3 +86,37 @@
     <script src="chat.js"></script>
 </body>
 </html>
+
+<?php if(isset($_SESSION['user_id'])){ ?>
+    <!-- CHAT -->
+    <div class="chat">
+        <div class="chat-header">
+            <img src="https://placedog.net/50/50" alt="">
+            <h3>Chat général</h3>
+        </div>
+
+        <div class="chat-messages">
+
+        <?php
+        foreach($chat as $ckey => $cvalue){
+            ?>
+            <div class="message-container <?php if ($cvalue['estExpediteur'] == 'Vrai') {echo "user-message"; }else { echo "other-message";}; ?>">
+                <div class ="author"><?php if ($cvalue['estExpediteur'] == 'Vrai') {echo "Moi"; }else { echo $cvalue['auteur'];}?></div>
+                <div class="message">
+                    <?=$cvalue['message']?>
+                </div>
+                <div class="date-sent"><?= $cvalue['time']?></div>
+            </div>
+        <?php
+        }
+        ?>
+        </div>
+        <div class ="chat-send">
+        <form action="./send_message.php" method="POST" class="send-message">
+            <input type="text" placeholder="Votre message..." name="messagetxt" id="messagetxt">
+            <input type="submit" value="Envoyer" id="send-button" name="valide" onclick="message()">
+        </form>
+        </div>
+    </div>
+    <!-- CHAT -->
+    <?php } ?>

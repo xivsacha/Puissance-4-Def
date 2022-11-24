@@ -1,15 +1,124 @@
+/* HEADER */
+
+.tittle{
+    display: flex;
+    text-align: right;
+    flex-direction: column;
+    align-items: center;
+    background: url("assets/inscBG.jpg");
+    background-size: cover;
+    height: 300px;
+}
+
+h1{
+    margin-top: 110px;
+    font-size: 80px
+}
+
+.gotopbtn {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color: orange;
+    bottom: 40px;
+    right: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 22px;
+    opacity: 50%;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(17, 13, 48, 0.53);
+    background-size: cover;
+}
+
+.topHeader{
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    background-color: rgb(20, 16, 58);
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.nav{
+    color: rgb(250, 251, 253);
+    font-size: 20px;
+   
+}
+
 .inscTitle{
     padding-top: 2%;
     padding-bottom: 2%;
     color: white;
     font-size: 400%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.headerTitle{
+    color: rgb(250, 251, 253);
+    font-size: 25px;
+    margin-right: 300px;
+}
+
+.navLinks{
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.navLinks:link{
+    color: rgb(250, 251, 253);
+}
+
+.navLinks:visited{
+    color: rgb(250, 251, 253);
+}
+
+.navLinks:hover{
+    color: rgb(250,140,0);
+}
+
+
+
+a{
+    text-decoration: none;
+}
+
+
+
+.white{
+    color: rgb(199,202,229);
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.subTitle{
+    color: rgb(250, 251, 253);
+    font-size: 25px;
+
+}
+
+
+/*-------FIN HEADER-------*/
+.inscTitle{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: white;
+    font-size: 400%;
     font-weight: bold;
 }
 
 body{
     margin: 0;
     padding: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .orangeButton{
@@ -18,7 +127,6 @@ body{
     align-items: center;
     background-color: rgb(250,140,0);
     color: rgb(250, 251, 253);
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     width: 150px;
     outline: none;
@@ -72,7 +180,6 @@ body{
     justify-content: center;
     align-items: center;
     color: rgb(199,202,229);
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     font-weight: normal;
     margin-right: 30px;
@@ -166,18 +273,75 @@ form input[name="msg"]{
 
 
 
-form input[type="email"]:focus,
-form input [type="email"]:hover,
-form input[type="text"]:focus,
-form input [type="text"]:hover,
-form input[type="password"]:focus,
-form input [type="password"]:hover,
-form input[type="password"]:focus,
-form input [type="password"]:hover { 
-    background-color: rgb(40, 45, 93);
+/* FOOTER */
+
+.leftFooter{
+    display: flex;
+    flex-direction: column;
 }
 
-form button[type="submit"]:focus,
-form button[type="submit"]:hover{
-    background-color: rgb(40, 45, 93);
+
+
+footer{
+    display: flex;
+    background-color: rgb(14,10,40);
+    justify-content: space-evenly;
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+
+.rightFooter{
+    display: flex;
+    flex-direction: column;
+}
+
+.logos{
+    background-color: rgb(250,140,0);
+    width: 40px;
+    height: 40px;
+    margin-right: 4px;
+}
+
+.white{
+    color: rgb(199,202,229);
+    font-size: 15px;
+    font-weight: normal;
+}
+
+
+.copyright{
+    color: rgb(199,202,229);
+    font-size: 13px;
+}
+
+.subTitle{
+    color: rgb(250, 251, 253);
+    font-size: 25px;
+
+}
+
+.yellow{
+    font-weight: bold;
+    color: rgb(250,140,0);
+    font-size: 15px;
+}
+
+.infoLink:link{
+    color: rgb(199,202,229);
+}
+
+.infoLink:visited{
+    color: rgb(199,202,229);
+}
+
+.infoLink{
+    text-decoration: none;
+}
+
+#bullet li::marker{
+    color: rgb(250,140,0);
+}
+
+.bullet{
+    list-style-type: square;
 }

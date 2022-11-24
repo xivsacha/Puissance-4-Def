@@ -1,26 +1,25 @@
 <?php
-    require_once('./includes/databases.inc.php');
-    if(isset($_POST['submit'])){
-
+    require ('includes/databases.inc.php');
+    if(isset($_POST['button'])){
         $email = $_POST['email'];
         $password = $_POST['password'];
+        $_SESSION['loggedin'] = false;
 
             if($email != '' && $password != ''){
-                $sth = $dbh->prepare('SELECT * FROM utilisateur WHERE email = ? AND password = ?');
+                $sth = $dbh->prepare('SELECT * FROM user WHERE email = ? AND password = ?');
                 $sth->execute([$email, $password]);
                 $donnees = $sth->fetch();
                 if($donnees != ""){
                     $_SESSION['user'] = $donnees;
                     $_SESSION['loggedin'] = true;
-                    $_SESSION['pseu'] = $donnees['pseudo'];
+                    $_SESSION['pseudo'] = $donnees['pseudo'];
                     header('Location:index.php');
                 }
             }
     }
-
 ?>
-        
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,22 +27,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link href="style/login.css" rel="stylesheet">
-    <link href="style/sideHeader.css" rel="stylesheet">
-    <link href="view/footer.css" rel="stylesheet">
+   
 </head>
 <body>
     <?php
+       
         include "./view/header.inc.php";
     ?>
+    <a class="gotopbtn" href="#"><i class="fa-solid fa-angle-up"></i></a>
+    <section class="tittle">
+        <h1>Connexion</h1>
+    </section>
     <section class="main">
         <div class="forms">
-                <form action="" method="post">
-                    <input type="email" name="email" placeholder="Email"   required="required" /> <br>
-                    <input type="password" name="password" placeholder="Mot de passe"  required="required"/>
-                    <input type="submit" name="submit" value="Connexion" class="orangeButton">
-                </form> 
-                <a href="inscription.php" class="option">Pas de compte? Inscrivez-vous!</a></div>
-            </div>
+            <form method="post">
+                <input type="email" name="email" placeholder="Email"   required="required" /> <br>
+                <input type="password" name="password" placeholder="Mot de passe"  required="required"/>
+                <div class="text_align">
+                <input type="submit" name="button" class="orangeButton" value="Connexion"><a href="inscription.php" class="option">Pas de compte? Inscrivez-vous!</a>
+                </div>
+            </form>
+        </div>
     </section>
 
     <?php 
