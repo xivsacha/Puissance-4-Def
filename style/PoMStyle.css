@@ -1,22 +1,137 @@
+/* HEADER */
+
+
+header{
+    display: flex;
+    background-image: url("assets/une-jeu-video-twitch.jpeg");
+    background-size: cover;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.gotopbtn {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color: orange;
+    bottom: 40px;
+    right: 50px;
+
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 22px;
+
+    opacity: 50%;
+}
+
+.topHeader{
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    background-color: rgba(17, 13, 48, 0.53);
+}
+
+.nav{
+    color: rgb(250, 251, 253);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bigTitle{
+    color: rgb(250, 251, 253);
+    font-size: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.bottomHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(17, 13, 48, 0.53);
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.headerTitle{
+    color: rgb(250, 251, 253);
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 300px;
+}
+
+.navLinks{
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.navLinks:link{
+    color: rgb(250, 251, 253);
+}
+
+.navLinks:visited{
+    color: rgb(250, 251, 253);
+}
+
+.navLinks:hover{
+    color: rgb(250,140,0);
+}
+
+.orangeButton{
+    background-color: rgb(250,140,0);
+    color: rgb(250, 251, 253);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    width: 170px;
+    height: 40px;
+    outline: none;
+    text-align: center;
+    padding-top: 20px;
+    margin-top: -40px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.orangeButton:focus{
+    outline: none;
+}
+
+.white{
+    color: rgb(199,202,229);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.subTitle{
+    color: rgb(250, 251, 253);
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ /* fin HEADER */
+
 body{
     margin: 0;
     padding: 0;
     background-color: rgba(17, 13, 48, 0.53);
 }
 
-
 .section1{
     background-color: rgb(17, 13, 48);
     display: flex;
     flex-direction: column;
-    padding-bottom: 100px;
+    padding-top: 10px;
 }
 
 .section2{
     background-color: rgb(18,15,49);
     display: flex;
     flex-direction: column;
-    padding-top: 100px;
+    padding-top: 250px;
 }
 
 .img123{
@@ -58,13 +173,13 @@ body{
 .teamPictures{
     display: flex;
     flex-direction: row;
+  
 }
 
 .Picture{
     border-radius: 50%;
     height: 150px;
     width: 150px;
-
     margin-bottom: 70px;
 }
 
@@ -81,8 +196,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     margin-right: 20px;
-    box-shadow: rgb(61,31,167);
-    
+
     
 
 }
@@ -104,8 +218,7 @@ body{
     justify-content: space-evenly;
     margin-left: 70px;
 }
-
-.firstSquare{
+.firstSquare {
     display: flex;
     color: rgb(250, 251, 253);
     font-size: 25px;
@@ -116,8 +229,8 @@ body{
     background-color: rgb(61,31,167);
     height: 150px;
     width: 230px;
-    border-radius: 3px;
 }
+
 
 .secondSquare{
     display: flex;
@@ -131,8 +244,6 @@ body{
     height: 150px;
     width: 230px;
     margin-left: 20px;
-    border-radius: 3px;
-
 }
 
 .thirdSquare{
@@ -146,8 +257,20 @@ body{
     background-color: rgb(202,0,173);
     height: 150px;
     width: 230px;
-    border-radius: 3px;
+}
 
+.fourthSquare{
+    display: flex;
+    color: rgb(250, 251, 253);
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(250,140,0);
+    height: 150px;
+    width: 230px;
+    margin-left: 20px;
 }
 
 .fourthSquare{
@@ -228,4 +351,78 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* FOOTER */
 
+.leftFooter{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+footer{
+    display: flex;
+    background-color: rgb(14,10,40);
+    justify-content: space-evenly;
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+
+.rightFooter{
+    display: flex;
+    flex-direction: column;
+}
+
+.logos{
+    background-color: rgb(250,140,0);
+    width: 40px;
+    height: 40px;
+    margin-right: 4px;
+}
+
+.white{
+    color: rgb(199,202,229);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+
+.copyright{
+    color: rgb(199,202,229);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.subTitle{
+    color: rgb(250, 251, 253);
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.yellow{
+    font-weight: bold;
+    color: rgb(250,140,0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.infoLink:link{
+    color: rgb(199,202,229);
+}
+
+.infoLink:visited{
+    color: rgb(199,202,229);
+}
+
+.infoLink{
+    text-decoration: none;
+}
+
+#bullet li::marker{
+    color: rgb(250,140,0);
+}
+
+.bullet{
+    list-style-type: square;
+}

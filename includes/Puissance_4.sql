@@ -27,6 +27,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `game`
 --
 
+DROP TABLE IF EXISTS `game`;
 CREATE TABLE `game` (
   `game_ID` int(11) NOT NULL,
   `game_name` text NOT NULL
@@ -38,6 +39,7 @@ CREATE TABLE `game` (
 -- Table structure for table `message`
 --
 
+DROP TABLE IF EXISTS `message`;
 CREATE TABLE `message` (
   `message_ID` int(11) NOT NULL,
   `game_ID` int(11) NOT NULL,
@@ -52,6 +54,7 @@ CREATE TABLE `message` (
 -- Table structure for table `score`
 --
 
+DROP TABLE IF EXISTS `score`;
 CREATE TABLE `score` (
   `score_ID` int(11) NOT NULL,
   `player_ID` int(11) NOT NULL,
@@ -67,6 +70,7 @@ CREATE TABLE `score` (
 -- Table structure for table `user`
 --
 
+DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `player_ID` int(11) NOT NULL,
   `email` varchar(255) NOT NULL,
@@ -102,7 +106,7 @@ ALTER TABLE `score`
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`player_ID`,`email`);
+  ADD PRIMARY KEY (`player_ID`);
 
 --
 -- AUTO_INCREMENT for dumped tables

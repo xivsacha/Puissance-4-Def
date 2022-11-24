@@ -2,5 +2,5 @@
 
 $user = "root";
 $pass = "root";
-$dbh = new PDO('mysql:host=localhost;dbname=puissance 4', $user, $pass);
+$dbh = new PDO('mysql:host=localhost;dbname=Puissance_4', $user, $pass);
 ?>

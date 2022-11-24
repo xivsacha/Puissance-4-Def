@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Espace</title>
     <link href="style/monespace.css" rel="stylesheet">
-    <link href="style/sideHeader.css" rel="stylesheet">
-    <link href="style/footer.css" rel="stylesheet">
+  
 
 </head>
 <body>
     <?php
-        include "./view/header.inc.php" ;
+        include "./view/header.inc.php";
     ?>
+    <a class="gotopbtn" href="#"><i class="fa-solid fa-angle-up"></i></a>
     <section>
         <div class="banner">
             <p class="profileName">rat balls</p>

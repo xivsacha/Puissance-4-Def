@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scores</title>
     <link href="style/score.css" rel="stylesheet">
-    <link href="style/sideHeader.css" rel="stylesheet">
-    <link href="style/footer.css" rel="stylesheet">
+
+   
 </head>
 <body>
     
     <?php
         include "./view/header.inc.php";
     ?>
-
+    <a class="gotopbtn" href="#"><i class="fa-solid fa-angle-up"></i></a>
+    <section class="tittle">
+        <h1>Scores</h1>
+    </section>
     <section class="scoreMain">
         <table class="scoreTable">
             <thead class="tableHeader">
@@ -88,6 +91,8 @@
         <p class="white">will add a load more button when its linked to the database</p>
     </section>
 
-    <?php  include "./view/footer.inc.php";?>
+    <?php  
+    include "./view/footer.inc.php";
+    ?>
 </body>
 </html>

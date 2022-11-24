@@ -1,5 +1,6 @@
-<html>
-<link href="./view/footer.css" rel="stylesheet">
+<?php
+$cssFileName= 'footer.css';
+?>
     <footer>
         <div class="leftFooter">
             <p class="subTitle">Information</p>
@@ -30,4 +31,5 @@
             </div>
         </div>
     </footer>
+</body>
 </html>
