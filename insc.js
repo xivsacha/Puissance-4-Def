@@ -60,7 +60,7 @@ function checkPasswordStrength(password) {
 
             break;
         case 3:
-            progress_bar.style.cssText = `width  : ${(strength / 3)*100}%; background-color: green;`;
+            progress_bar.style.cssText = `width  : ${(strength / 3)*98}%; background-color: green;`;
            
             check = document.getElementById("p3");
            
