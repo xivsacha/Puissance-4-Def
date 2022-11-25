@@ -95,7 +95,6 @@
     <!-- CHAT -->
     <div class="chat">
         <div class="chat-header">
-            <img src="https://placedog.net/50/50" alt="">
             <h3>Chat général</h3>
         </div>
 

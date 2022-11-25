@@ -8,13 +8,14 @@ if(isset($_POST['button']))
    $password = $_POST['password'];
    $password_retype = $_POST['password_retype'];
    if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-    if(preg_match('/[a-z]/', $password) && preg_match('/[A-Z]/', $password)  && preg_match('/\d/', $password) || preg_match('/[^a-zA-Z\d]/', $password)){
+    //if(preg_match('/[a-z]/', $password) && preg_match('/[A-Z]/', $password)  && preg_match('/\d/', $password) || preg_match('/[^a-zA-Z\d]/', $password)){
         if($password_retype == $password){
             $sth = $dbh->prepare("INSERT INTO user (email, `password`, pseudo, inscr_date, login_date) VALUES (?, ?, ?, NOW(), NOW())");
             $sth->execute([$email, $password, $pseudo]);
             $data = $sth->fetch();
             header('Location:login.php');
-}}
+//}
+}
 }}
 
        
@@ -29,6 +30,9 @@ if(isset($_POST['button']))
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
     <link rel="stylesheet" href="style/inscription.css">
+    <script src="/Applications/MAMP/htdocs/puissance_4_PHP/insc.js"></script>
+
+
    
 </head>
 <body>
