@@ -43,16 +43,28 @@ if(isset($_POST['button']))
 
     <section class="main">
         <div class="forms">
-                <form action="" method="post">
+                <form action="" method="post" id="form">
                     <input type="email" name="email" placeholder="Email"   required="required" /> <br>
                     <input type="text" name="pseudo" placeholder="Pseudo"  required="required"/> <br>
-                    <input type="password" name="password" placeholder="Mot de passe"  required="required"/> <br>
+                    <div class="password_checker">
+                        <div class="input_group">
+                            <input type="password" id="password" placeholder ="Mot de passe" name = "mot-de-passe">
+                            </div>
+                            <div class="progress">
+                                    <div class="barre">
+                                    
+                                    </div>
+                                    <div id="forceMdp"></div>
+                                    </div>
+                            </div>
                     <input type="password" name="password_retype" placeholder="Confirmer le mot de passe"  required="required"/>
                     <div class="buttonStuff"><input type="submit" name="button" class="orangeButton" value="Inscription"><a href="login.php" class="option">Déjà un compte? Connectez-vous!</a>
                     </div>
                 </form>
                 
     </section>
+
+    <script src="insc.js"></script>
 
     <?php 
          include "./view/footer.inc.php";

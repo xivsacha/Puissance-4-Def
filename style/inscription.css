@@ -146,9 +146,24 @@ section.main{
     margin-bottom: 50px;
 }
 
+#forceMdp{
+    color: rgb(199,202,229);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.barre{
+    background-color: unset;
+    height: 5px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-top: -5px;
+}
 
 form input[name="email"],
 form input[name="password"],
+form input[name="mot-de-passe"],
 form input[name="pseudo"],
 form input[name="password_retype"]{
     width: 500px;

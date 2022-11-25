@@ -1,12 +1,10 @@
 const password_checker = document.querySelector('.password-checker');
 const password = document.querySelector('#password');
-const progress_bar = document.createElement("div");
-const button = document.querySelector(".buttonStuff");
+const progress_bar = document.querySelector('.barre');
 
 password.onkeyup = () =>{
     //console.log(password.value)
     checkPasswordStrength(password.value);
-    document.querySelector("#form").insertBefore(button, progress_bar);
 }
 
 function checkPasswordStrength(password) {
@@ -40,7 +38,6 @@ function checkPasswordStrength(password) {
                 recep.append(weak);
 
             }
-
             break;
         case 2:
             progress_bar.style.cssText = `width  : ${(strength / 3)*100}%; background-color: yellow;`;
