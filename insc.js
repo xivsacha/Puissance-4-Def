@@ -1,6 +1,9 @@
 const password_checker = document.querySelector('.password-checker');
 const password = document.querySelector('#password');
 const progress_bar = document.querySelector('.barre');
+let strengthP = document.createElement("p");
+let recep = document.getElementById("forceMdp");
+
 
 password.onkeyup = () =>{
     //console.log(password.value)
@@ -22,55 +25,52 @@ function checkPasswordStrength(password) {
     switch(strength){
         case 0:
             progress_bar.style.cssText = `width  : ${(strength / 3)*100}%; background-color: unset;`;
+            strengthP.textContent = "";
             write("resultat");
             break;
         case 1:
             progress_bar.style.cssText = `width  : ${(strength / 3)*100}%; background-color: red;`;
 
-            check = document.getElementById("prout1");
+            check = document.getElementById("p1");
 
             if(check == undefined){
 
-                let recep = document.getElementById("forceMdp");
-                let weak = document.createElement("p");
-                weak.textContent = "Weak";
-                weak.setAttribute("id","prout1");
-                recep.append(weak);
+                
+                strengthP.textContent = "Weak";
+                strengthP.removeAttribute("id","p1");
+                strengthP.removeAttribute("id","p2");
+                strengthP.setAttribute("id","p1");                
+                recep.append(strengthP);
 
             }
             break;
         case 2:
             progress_bar.style.cssText = `width  : ${(strength / 3)*100}%; background-color: yellow;`;
 
-            check = document.getElementById("prout2");
+            check = document.getElementById("p2");
 
             if(check == undefined){
 
-                let recep = document.getElementById("forceMdp");
-                let remove = document.getElementById("prout1");
-                let medium = document.createElement("p");
-                medium.textContent = "Medium";
-                medium.setAttribute("id","prout2");
-                recep.append(medium);
-                remove.remove();
-
+                strengthP.textContent = "Medium";
+                strengthP.removeAttribute("id","p1");
+                strengthP.removeAttribute("id","p3");
+                strengthP.setAttribute("id","p2");
+                recep.append(strengthP);
             }
 
             break;
         case 3:
             progress_bar.style.cssText = `width  : ${(strength / 3)*100}%; background-color: green;`;
            
-            check = document.getElementById("prout3");
+            check = document.getElementById("p3");
            
             if(check == undefined){
 
-                let recep = document.getElementById("forceMdp");
-                let remove = document.getElementById("prout2");
-                let strong = document.createElement("p");
-                strong.textContent = "Strong";
-                strong.setAttribute("id","prout3");
-                recep.append(strong);
-                remove.remove();
+                strengthP.textContent = "Strong";
+                strengthP.removeAttribute("id","p1");
+                strengthP.removeAttribute("id","p2");
+                strengthP.setAttribute("id","p3");                
+                recep.append(strengthP);
 
             }
 
