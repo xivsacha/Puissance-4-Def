@@ -1,10 +1,8 @@
 <?php
-    require ('includes/databases.inc.php');
+    require ('./includes/databases.inc.php');
     if(isset($_POST['button'])){
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $_SESSION['loggedin'] = false;
-
             if($email != '' && $password != ''){
                 $sth = $dbh->prepare('SELECT * FROM user WHERE email = ? AND password = ?');
                 $sth->execute([$email, $password]);
@@ -13,6 +11,7 @@
                     $_SESSION['user'] = $donnees;
                     $_SESSION['loggedin'] = true;
                     $_SESSION['pseudo'] = $donnees['pseudo'];
+                    $_SESSION['id_user'] = $donnees['player_ID'];
                     header('Location:index.php');
                 }
             }
@@ -41,12 +40,14 @@
     <section class="main">
         <div class="forms">
             <form method="post">
-                <input type="email" name="email" placeholder="Email"   required="required" /> <br>
+                <input type="email" name="email" placeholder="Email" required="required" /> <br>
                 <input type="password" name="password" placeholder="Mot de passe"  required="required"/>
                 <div class="text_align">
                 <input type="submit" name="button" class="orangeButton" value="Connexion"><a href="inscription.php" class="option">Pas de compte? Inscrivez-vous!</a>
+
                 </div>
             </form>
+            
         </div>
     </section>
 

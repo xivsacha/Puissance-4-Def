@@ -1,3 +1,22 @@
+<?php 
+    require ('./includes/databases.inc.php'); 
+    include "./view/header.inc.php";
+
+    $id_user = $_SESSION['id_user'];
+
+    if(isset($_POST['submit'])){
+        $message = $_POST['text'];
+        if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
+                if(isset($_POST['text'])){
+                    $sth = $dbh->prepare("INSERT INTO message (game_ID, player_ID, message, message_date) VALUES (1, ?, ?, NOW())");
+                    $sth->execute([$id_user, $message]);
+
+                }
+            }
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +31,7 @@
 </head>
 <body>
     <?php
-        include "./view/header.inc.php";
+        /*include "./view/header.inc.php";*/
     ?>
     <a class="gotopbtn" href="#"><i class="fa-solid fa-angle-up"></i></a>
     <section class="tittle">
@@ -74,8 +93,8 @@
     <div class="chatBox" id="chatBox">
         <div id="msgBox">
         </div>
-            <form id="form">
-                <input class="typingWindow" type="text" id="text">
+            <form method="POST" id="form">
+                <input class="typingWindow" name="text" type="text" id="text">
                 <input type="image" name="submit" src="style/assets/chaticon2.png">
             </form>
     </div>
@@ -87,36 +106,3 @@
 </body>
 </html>
 
-<?php if(isset($_SESSION['user_id'])){ ?>
-    <!-- CHAT -->
-    <div class="chat">
-        <div class="chat-header">
-            <img src="https://placedog.net/50/50" alt="">
-            <h3>Chat général</h3>
-        </div>
-
-        <div class="chat-messages">
-
-        <?php
-        foreach($chat as $ckey => $cvalue){
-            ?>
-            <div class="message-container <?php if ($cvalue['estExpediteur'] == 'Vrai') {echo "user-message"; }else { echo "other-message";}; ?>">
-                <div class ="author"><?php if ($cvalue['estExpediteur'] == 'Vrai') {echo "Moi"; }else { echo $cvalue['auteur'];}?></div>
-                <div class="message">
-                    <?=$cvalue['message']?>
-                </div>
-                <div class="date-sent"><?= $cvalue['time']?></div>
-            </div>
-        <?php
-        }
-        ?>
-        </div>
-        <div class ="chat-send">
-        <form action="./send_message.php" method="POST" class="send-message">
-            <input type="text" placeholder="Votre message..." name="messagetxt" id="messagetxt">
-            <input type="submit" value="Envoyer" id="send-button" name="valide" onclick="message()">
-        </form>
-        </div>
-    </div>
-    <!-- CHAT -->
-    <?php } ?>

@@ -3,26 +3,18 @@ const inputText = document.getElementById("text");
 const chatBox = document.querySelector("#chatBox");
 const msgBox = document.querySelector("#msgBox")
 
-let who = 0;
 
 form.addEventListener("submit", function (event) {
     event.preventDefault();
     console.log("message sent")
-    message = inputText.value;
+    let message = inputText.value;
     if(message != ""){
         const newMessage = document.createElement("p");
         const msgText = document.createTextNode(message);
         newMessage.appendChild(msgText);
-        if(who == 1){    
-            newMessage.classList.remove("userMessage");
-            newMessage.classList.add("message");
-            who = 0;
-        } else {
-            newMessage.classList.remove("message");
-            newMessage.classList.add("userMessage");
-            who = 1;
-        }
+        newMessage.classList.add("userMessage");
         chatBox.insertBefore(newMessage, msgBox);
+        inputText.value = "";
     }
 
 });
