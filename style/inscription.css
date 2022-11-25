@@ -1,6 +1,6 @@
 /* HEADER */
 
-.tittle{
+.title{
     display: flex;
     text-align: right;
     flex-direction: column;
@@ -107,6 +107,33 @@ body{
 
 }
 
+.disabledButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(250, 142, 0, 0.415);
+    color: rgba(250, 251, 253, 0.476);
+    font-size: 15px;
+    width: 150px;
+    outline: none;
+    text-align: center;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    text-decoration: none;
+    border-radius: 5px;
+
+}
+
+.disabledButton:focus{
+    outline: none;
+}
+
+.disabledButton:hover{
+    outline: none;
+    color: rgba(250, 251, 253, 0.264);
+    background-color: rgba(255, 174, 0, 0.199);
+}
+
 .orangeButton:focus{
     outline: none;
 }
@@ -126,10 +153,12 @@ body{
     margin-left: 150px;
     color: rgb(199,202,229);
     font-size: 15px;
+    text-decoration: none;
 }
 
 .option:hover{
     color: rgb(250,140,0);
+    text-decoration: none;
 }
 
 section.main{
@@ -160,6 +189,13 @@ section.main{
     border-radius: 5px;
     margin-bottom: 5px;
     margin-top: -5px;
+}
+
+.errMsg{
+    color: rgb(228, 177, 177);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-left: 5px;
 }
 
 form input[name="email"],
